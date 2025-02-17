@@ -7,9 +7,7 @@ import Menu from "../components/Menu";
 import MenuIcon from "../components/MenuIcon";
 
 export default function Home() {
-  //const assetPrefix = process.env.NODE_ENV === 'production' ? '/Photography_Portfolio_2025' : '';
   const { menuVisible } = useGlobalContext();
-
 
   return (
     <main className="app">

@@ -1,11 +1,12 @@
 import { useGlobalContext } from '../context/GlobalContext';
+import { icons } from '../constants/ImageManager';
 
 const MenuIcon: React.FC = () => {
   const { toggleMenu } = useGlobalContext();
 
   return (
     <div className='menu-icon-container' onClick={toggleMenu}>
-      <img src='/MenuIcon.png' alt="Menu Icon" className="menu-icon" />
+      <img src={icons.menuIcon} alt="Menu Icon" className="menu-icon" />
     </div>
   );
 };
