@@ -1,6 +1,6 @@
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 a {
@@ -8,7 +8,6 @@ a {
   text-decoration: none;
 }
 
-/* New styles below */
 .app {
   background-color: white;
   box-sizing: border-box;
@@ -22,8 +21,6 @@ a {
 .carouselArrowImage {
   background-color: grey;
   cursor: pointer;
-  height: 7.5%;
-  min-height: 35px;
   opacity: 0;
   padding: 10px;
   position: absolute;
@@ -64,15 +61,10 @@ a {
   background-color: rgba(30, 30, 30, 0.9);
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 100vh;
   justify-content: center;
   position: absolute;
-  width: 100%;
-}
-
-.menu-icon {
-  height: 100%;
-  width: 100%;
+  width: 100vw;
 }
 
 .menu-icon-container {

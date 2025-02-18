@@ -1,10 +1,11 @@
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { icons, bwImages, colourImages, bandImages } from '../constants/ImageManager';
 import { useGlobalContext } from '../context/GlobalContext';
 
 const Carousel: React.FC = () => {
   const { activeGallery } = useGlobalContext();
-  
+
   // Determine which images to show based on activeGallery
   const getCurrentGalleryImages = () => {
     switch (activeGallery) {
@@ -32,36 +33,40 @@ const Carousel: React.FC = () => {
 
   // Navigate to the previous image
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) => 
+    setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? imageKeys.length - 1 : prevIndex - 1
     );
   };
 
   // Navigate to the next image
   const handleNext = () => {
-    setCurrentIndex((prevIndex) => 
+    setCurrentIndex((prevIndex) =>
       prevIndex === imageKeys.length - 1 ? 0 : prevIndex + 1
     );
   };
 
   return (
     <div className='carousel-container'>
-      <img
-        src={icons.leftArrow}
+      <Image
         alt="Left Arrow"
         className="carouselArrowImage leftArrow"
+        height={45}
         onClick={handlePrev}
+        src={icons.leftArrow}
+        width={35}
       />
-      <img
-        src={icons.rightArrow}
+      <Image
         alt="Right Arrow"
         className="carouselArrowImage rightArrow"
+        height={45}
         onClick={handleNext}
+        src={icons.rightArrow}
+        width={35}
       />
-      <img 
+      <img
+        alt="Carousel Image"
+        className="carousel-image"
         src={currentImages[imageKeys[currentIndex]] as string}
-        alt="Carousel Image" 
-        className="carousel-image" 
       />
     </div>
   );
