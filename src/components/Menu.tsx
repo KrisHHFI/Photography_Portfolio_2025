@@ -3,23 +3,36 @@ import { useGlobalContext } from '../context/GlobalContext';
 import { icons } from '../constants/ImageManager';
 
 const Menu: React.FC = () => {
-  const { setActiveGallery, toggleMenu } = useGlobalContext();
+  const { activeGallery, setActiveGallery, toggleMenu } = useGlobalContext();
 
   const handleGalleryChange = (gallery: string) => {
     setActiveGallery(gallery);
     toggleMenu();
   };
 
+  const getLinkClass = (gallery: string) => {
+    return `menu-link ${activeGallery === gallery ? 'menu-active-link' : ''}`;
+  };
+
   return (
     <div className='menu'>
       <div className='menu-links'>
-        <div className='menu-link' onClick={() => handleGalleryChange('BW Head Shots')}>
+        <div
+          className={getLinkClass('BW Head Shots')}
+          onClick={() => handleGalleryChange('BW Head Shots')
+          }>
           BW Head Shots
         </div>
-        <div className='menu-link' onClick={() => handleGalleryChange('Colour Head Shots')}>
+        <div
+          className={getLinkClass('Colour Head Shots')}
+          onClick={() => handleGalleryChange('Colour Head Shots')}
+        >
           Colour Head Shots
         </div>
-        <div className='menu-link' onClick={() => handleGalleryChange('Bands')}>
+        <div
+          className={getLinkClass('Bands')}
+          onClick={() => handleGalleryChange('Bands')}
+        >
           Bands
         </div>
       </div>
