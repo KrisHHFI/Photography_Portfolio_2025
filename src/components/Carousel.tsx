@@ -63,10 +63,12 @@ const Carousel: React.FC = () => {
         src={icons.rightArrow}
         width={35}
       />
-      <img
+      <Image
         alt="Carousel Image"
         className="carousel-image"
+        height={0}
         src={currentImages[imageKeys[currentIndex]] as string}
+        width={0}
       />
     </div>
   );
