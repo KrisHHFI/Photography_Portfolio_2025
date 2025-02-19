@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { icons, bwImages, colourImages, bandImages } from '../constants/ImageManager';
 import { useGlobalContext } from '../context/GlobalContext';
+import { GALLERIES } from '../constants/strings';
 
 const Carousel: React.FC = () => {
   const { activeGallery } = useGlobalContext();
@@ -9,11 +10,11 @@ const Carousel: React.FC = () => {
   // Determine which images to show based on activeGallery
   const getCurrentGalleryImages = () => {
     switch (activeGallery) {
-      case 'BW Head Shots':
+      case GALLERIES.BW_HEAD_SHOTS:
         return bwImages;
-      case 'Colour Head Shots':
+      case GALLERIES.COLOUR_HEAD_SHOTS:
         return colourImages;
-      case 'Bands':
+      case GALLERIES.BANDS:
         return bandImages;
       default:
         return bwImages;

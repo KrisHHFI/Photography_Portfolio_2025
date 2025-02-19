@@ -1,6 +1,7 @@
 import React from 'react';
 import { useGlobalContext } from '../context/GlobalContext';
 import { icons } from '../constants/ImageManager';
+import { GALLERIES } from '../constants/strings';
 
 const Menu: React.FC = () => {
   const { activeGallery, setActiveGallery, toggleMenu } = useGlobalContext();
@@ -18,22 +19,22 @@ const Menu: React.FC = () => {
     <div className='menu'>
       <div className='menu-links'>
         <div
-          className={getLinkClass('BW Head Shots')}
-          onClick={() => handleGalleryChange('BW Head Shots')
-          }>
-          BW Head Shots
+          className={getLinkClass(GALLERIES.BW_HEAD_SHOTS)}
+          onClick={() => handleGalleryChange(GALLERIES.BW_HEAD_SHOTS)}
+        >
+          {GALLERIES.BW_HEAD_SHOTS}
         </div>
         <div
-          className={getLinkClass('Colour Head Shots')}
-          onClick={() => handleGalleryChange('Colour Head Shots')}
+          className={getLinkClass(GALLERIES.COLOUR_HEAD_SHOTS)}
+          onClick={() => handleGalleryChange(GALLERIES.COLOUR_HEAD_SHOTS)}
         >
-          Colour Head Shots
+          {GALLERIES.COLOUR_HEAD_SHOTS}
         </div>
         <div
-          className={getLinkClass('Bands')}
-          onClick={() => handleGalleryChange('Bands')}
+          className={getLinkClass(GALLERIES.BANDS)}
+          onClick={() => handleGalleryChange(GALLERIES.BANDS)}
         >
-          Bands
+          {GALLERIES.BANDS}
         </div>
       </div>
 

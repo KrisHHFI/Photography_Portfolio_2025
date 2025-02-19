@@ -43,10 +43,10 @@ export const colourImages = [
 
 // Icons
 export const icons = {
-    cameraIcon: `${assetPrefix}/CameraIcon.png`,
-    githubIcon: `${assetPrefix}/GitHub.png`,
-    leftArrow: `${assetPrefix}/LeftArrow.png`,
-    linkedInIcon: `${assetPrefix}/LinkedInIcon.png`,
-    menuIcon: `${assetPrefix}/MenuIcon.png`,
-    rightArrow: `${assetPrefix}/RightArrow.png`,
+    cameraIcon: `${assetPrefix}/icons/CameraIcon.png`,
+    githubIcon: `${assetPrefix}/icons/GitHub.png`,
+    leftArrow: `${assetPrefix}/icons/LeftArrow.png`,
+    linkedInIcon: `${assetPrefix}/icons/LinkedInIcon.png`,
+    menuIcon: `${assetPrefix}/icons/MenuIcon.png`,
+    rightArrow: `${assetPrefix}/icons/RightArrow.png`,
 };
