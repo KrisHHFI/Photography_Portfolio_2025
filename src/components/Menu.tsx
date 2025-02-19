@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { GALLERIES } from '../constants/strings';
 import { icons } from '../constants/ImageManager';
 import { useGlobalContext } from '../context/GlobalContext';
@@ -43,10 +44,12 @@ const Menu: React.FC = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
-            src={icons.cameraIcon}
+          <Image
             alt="Camera Icon"
             className="menu-social-icon"
+            height={25}
+            src={icons.cameraIcon}
+            width={25}
           />
         </a>
         <a
@@ -54,10 +57,12 @@ const Menu: React.FC = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
-            src={icons.githubIcon}
+          <Image
             alt="GitHub Icon"
             className="menu-social-icon"
+            height={25}
+            src={icons.githubIcon}
+            width={25}
           />
         </a>
         <a
@@ -65,10 +70,12 @@ const Menu: React.FC = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
-            src={icons.linkedInIcon}
+          <Image
             alt="LinkedIn Icon"
             className="menu-social-icon"
+            height={25}
+            src={icons.linkedInIcon}
+            width={25}
           />
         </a>
       </div>
