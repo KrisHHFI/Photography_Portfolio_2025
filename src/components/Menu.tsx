@@ -18,24 +18,15 @@ const Menu: React.FC = () => {
   return (
     <div className='menu'>
       <div className='menu-links'>
-        <div
-          className={getLinkClass(GALLERIES.BW_HEAD_SHOTS)}
-          onClick={() => handleGalleryChange(GALLERIES.BW_HEAD_SHOTS)}
-        >
-          {GALLERIES.BW_HEAD_SHOTS}
-        </div>
-        <div
-          className={getLinkClass(GALLERIES.COLOUR_HEAD_SHOTS)}
-          onClick={() => handleGalleryChange(GALLERIES.COLOUR_HEAD_SHOTS)}
-        >
-          {GALLERIES.COLOUR_HEAD_SHOTS}
-        </div>
-        <div
-          className={getLinkClass(GALLERIES.BANDS)}
-          onClick={() => handleGalleryChange(GALLERIES.BANDS)}
-        >
-          {GALLERIES.BANDS}
-        </div>
+        {Object.values(GALLERIES).map((gallery) => (
+          <div
+            key={gallery}
+            className={getLinkClass(gallery)}
+            onClick={() => handleGalleryChange(gallery)}
+          >
+            {gallery}
+          </div>
+        ))}
       </div>
 
       <div className='menu-social-icons'>

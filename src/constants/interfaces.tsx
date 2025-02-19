@@ -6,7 +6,7 @@ export interface GlobalContextType {
 }
 
 export interface SocialLink {
-    href: string;
     alt: string;
+    href: string;
     src: string;
 };
