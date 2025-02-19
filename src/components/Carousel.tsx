@@ -1,8 +1,8 @@
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
-import { icons, bwImages, colourImages, bandImages } from '../constants/ImageManager';
-import { useGlobalContext } from '../context/GlobalContext';
+import { bandImages, bwImages, colourImages, icons } from '../constants/ImageManager';
 import { GALLERIES } from '../constants/strings';
+import { useEffect, useState } from 'react';
+import { useGlobalContext } from '../context/GlobalContext';
 
 const Carousel: React.FC = () => {
   const { activeGallery } = useGlobalContext();
@@ -61,7 +61,7 @@ const Carousel: React.FC = () => {
         className="carouselArrowImage rightArrow"
         height={45}
         onClick={handleNext}
-        src={icons.rightArrow}
+        src={icons.leftArrow}
         width={35}
       />
       <Image

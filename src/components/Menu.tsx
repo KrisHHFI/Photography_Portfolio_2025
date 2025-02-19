@@ -1,7 +1,6 @@
-import React from 'react';
-import { useGlobalContext } from '../context/GlobalContext';
-import { icons } from '../constants/ImageManager';
 import { GALLERIES } from '../constants/strings';
+import { icons } from '../constants/ImageManager';
+import { useGlobalContext } from '../context/GlobalContext';
 
 const Menu: React.FC = () => {
   const { activeGallery, setActiveGallery, toggleMenu } = useGlobalContext();

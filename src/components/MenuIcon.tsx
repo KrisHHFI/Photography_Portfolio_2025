@@ -1,6 +1,6 @@
-import { useGlobalContext } from '../context/GlobalContext';
-import { icons } from '../constants/ImageManager';
 import Image from 'next/image';
+import { icons } from '../constants/ImageManager';
+import { useGlobalContext } from '../context/GlobalContext';
 
 const MenuIcon: React.FC = () => {
   const { toggleMenu } = useGlobalContext();

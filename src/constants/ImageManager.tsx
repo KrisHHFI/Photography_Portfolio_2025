@@ -48,5 +48,4 @@ export const icons = {
     leftArrow: `${assetPrefix}/icons/LeftArrow.png`,
     linkedInIcon: `${assetPrefix}/icons/LinkedInIcon.png`,
     menuIcon: `${assetPrefix}/icons/MenuIcon.png`,
-    rightArrow: `${assetPrefix}/icons/RightArrow.png`,
 };

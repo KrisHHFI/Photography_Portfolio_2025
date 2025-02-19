@@ -1,6 +1,6 @@
+import { GlobalProvider } from '../context/GlobalContext';
 import type { Metadata } from "next";
 import '../../src/app/globals.css';
-import { GlobalProvider } from '../context/GlobalContext';
 
 export const metadata: Metadata = {
   title: "Kris Pepper Photography",

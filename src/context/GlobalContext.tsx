@@ -1,14 +1,7 @@
 "use client";
 
-import React, { createContext, useContext, useState, ReactNode } from 'react';
-
-// Define the shape of the context state
-interface GlobalContextType {
-  menuVisible: boolean;
-  toggleMenu: () => void;
-  activeGallery: string;
-  setActiveGallery: (gallery: string) => void;
-}
+import React, { createContext, ReactNode, useContext, useState } from 'react';
+import { GlobalContextType } from '../constants/interfaces';
 
 // Create the context with a default value
 const GlobalContext = createContext<GlobalContextType | undefined>(undefined);
