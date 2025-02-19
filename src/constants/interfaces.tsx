@@ -4,3 +4,9 @@ export interface GlobalContextType {
     setActiveGallery: (gallery: string) => void;
     toggleMenu: () => void;
 }
+
+export interface SocialLink {
+    href: string;
+    alt: string;
+    src: string;
+};

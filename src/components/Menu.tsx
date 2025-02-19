@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { GALLERIES } from '../constants/strings';
-import { icons } from '../constants/ImageManager';
+import { socialLinks } from '../constants/objectArrays';
 import { useGlobalContext } from '../context/GlobalContext';
 
 const Menu: React.FC = () => {
@@ -39,45 +39,11 @@ const Menu: React.FC = () => {
       </div>
 
       <div className='menu-social-icons'>
-        <a
-          href="https://www.shutterstock.com/g/Kristopher+Pepper?rid=263519982"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            alt="Camera Icon"
-            className="menu-social-icon"
-            height={25}
-            src={icons.cameraIcon}
-            width={25}
-          />
-        </a>
-        <a
-          href="https://github.com/KrisHHFI"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            alt="GitHub Icon"
-            className="menu-social-icon"
-            height={25}
-            src={icons.githubIcon}
-            width={25}
-          />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/kristopher-pepper-824184136/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            alt="LinkedIn Icon"
-            className="menu-social-icon"
-            height={25}
-            src={icons.linkedInIcon}
-            width={25}
-          />
-        </a>
+        {socialLinks.map(({ href, alt, src }) => (
+          <a key={href} href={href} target="_blank" rel="noopener noreferrer">
+            <Image alt={alt} className="menu-social-icon" height={25} src={src} width={25} />
+          </a>
+        ))}
       </div>
 
     </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import { GALLERIES } from '../constants/strings';
 import React, { createContext, ReactNode, useContext, useState } from 'react';
 import { GlobalContextType } from '../constants/interfaces';
 
@@ -9,7 +10,7 @@ const GlobalContext = createContext<GlobalContextType | undefined>(undefined);
 // Create a provider component
 export const GlobalProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [menuVisible, setMenuVisible] = useState<boolean>(false);
-  const [activeGallery, setActiveGallery] = useState<string>('BW Head Shots');
+  const [activeGallery, setActiveGallery] = useState<string>(GALLERIES.BW_HEAD_SHOTS);
 
   const toggleMenu = () => setMenuVisible(prev => !prev);
 
