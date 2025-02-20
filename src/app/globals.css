@@ -31,7 +31,6 @@ a {
 
 .carousel-container {
   align-self: center;
-  /*background-color: red;*/
   height: max-content;
   overflow: hidden;
   position: relative;
@@ -63,29 +62,10 @@ a {
   flex-direction: column;
   height: 100vh;
   justify-content: center;
-  position: absolute;
-  width: 100vw;
-
-  visibility: hidden;
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-}
-
-.menu-visible {
-  opacity: 1;
-  visibility: visible;
-}
-
-.menu-links,
-.menu-social-icons {
-  opacity: 0;
-  transform: translateY(-10px); /* Move up slightly for a smooth entrance */
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-.menu-visible .menu-links,
-.menu-visible .menu-social-icons {
-  opacity: 1;
-  transform: translateY(0);
+  position: absolute;
+  visibility: hidden;
+  width: 100vw;
 }
 
 .menu-active-link {
@@ -123,6 +103,13 @@ a {
   transform: scale(1.05);
 }
 
+.menu-links,
+.menu-social-icons {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
 .menu-social-icon {
   transition: all 0.25s ease;
 }
@@ -139,6 +126,17 @@ a {
   display: flex;
   flex-direction: row;
   margin-top: 60px;
+}
+
+.menu-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-visible .menu-links,
+.menu-visible .menu-social-icons {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .rightArrow {
