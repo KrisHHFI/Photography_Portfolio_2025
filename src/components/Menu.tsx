@@ -4,7 +4,7 @@ import { socialLinks } from '../constants/objectArrays';
 import { useGlobalContext } from '../context/GlobalContext';
 
 const Menu: React.FC = () => {
-  const { activeGallery, setActiveGallery, toggleMenu } = useGlobalContext();
+  const { activeGallery, menuVisible, setActiveGallery, toggleMenu } = useGlobalContext();
 
   const handleGalleryChange = (gallery: string) => {
     setActiveGallery(gallery);
@@ -16,7 +16,7 @@ const Menu: React.FC = () => {
   };
 
   return (
-    <div className='menu'>
+    <div className={`menu ${menuVisible ? 'menu-visible' : ''}`}>
       <div className='menu-links'>
         {Object.values(GALLERIES).map((gallery) => (
           <div
