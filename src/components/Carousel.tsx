@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { bandImages, bwImages, colourImages, icons } from '../constants/ImageManager';
+import { bandImages, bwImages, colourImages, gifImages, icons } from '../constants/ImageManager';
 import { GALLERIES } from '../constants/strings';
 import { useEffect, useState } from 'react';
 import { useGlobalContext } from '../context/GlobalContext';
@@ -15,6 +15,8 @@ const Carousel: React.FC = () => {
         return colourImages;
       case GALLERIES.BANDS:
         return bandImages;
+      case GALLERIES.GIFS:
+        return gifImages;
       default:
         return bwImages;
     }
@@ -45,18 +47,18 @@ const Carousel: React.FC = () => {
 
   return (
     <div className='carousel-container'>
-      
-        {imageKeys.map((key, index) => (
-          <Image
-            key={String(key)} 
-            alt="Carousel Image"
-            className={`${index === currentIndex ? 'active' : ''} carousel-image `}
-            height={0}
-            src={currentImages[key] as string}
-            width={0}
-          />
-        ))}
-      
+
+      {imageKeys.map((key, index) => (
+        <Image
+          key={String(key)}
+          alt="Carousel Image"
+          className={`${index === currentIndex ? 'active' : ''} carousel-image `}
+          height={0}
+          src={currentImages[key] as string}
+          width={0}
+        />
+      ))}
+
 
       <Image
         alt="Left Arrow"

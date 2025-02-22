@@ -41,6 +41,14 @@ export const colourImages = [
     `${assetPrefix}/portfolioImages/colourHeadShots/Colour10.webp`,
 ];
 
+// GIFs
+export const gifImages = [
+    `${assetPrefix}/portfolioImages/gifPortraits/GIF1.gif`,
+    `${assetPrefix}/portfolioImages/gifPortraits/GIF2.gif`,
+    `${assetPrefix}/portfolioImages/gifPortraits/GIF3.gif`,
+    `${assetPrefix}/portfolioImages/gifPortraits/GIF4.gif`, 
+];
+
 // Icons
 export const icons = {
     cameraIcon: `${assetPrefix}/icons/CameraIcon.png`,
