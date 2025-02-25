@@ -46,7 +46,9 @@ export const gifImages = [
     `${assetPrefix}/portfolioImages/gifPortraits/GIF1.gif`,
     `${assetPrefix}/portfolioImages/gifPortraits/GIF2.gif`,
     `${assetPrefix}/portfolioImages/gifPortraits/GIF3.gif`,
-    `${assetPrefix}/portfolioImages/gifPortraits/GIF4.gif`, 
+    `${assetPrefix}/portfolioImages/gifPortraits/GIF4.gif`,
+    `${assetPrefix}/portfolioImages/gifPortraits/GIF5.gif`,
+    `${assetPrefix}/portfolioImages/gifPortraits/GIF6.gif`, 
 ];
 
 // Icons
