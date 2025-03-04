@@ -4,7 +4,7 @@ import { SocialLink } from '../constants/interfaces'
 export const socialLinks: SocialLink[] = [
     {
         alt: "Camera Icon",
-        href: "https://www.shutterstock.com/g/Kristopher+Pepper?rid=263519982",
+        href: "https://www.shutterstock.com/g/Kris_Creative",
         src: icons.cameraIcon,
     },
     {
