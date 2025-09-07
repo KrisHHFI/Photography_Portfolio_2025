@@ -10,12 +10,12 @@ const GlobalContext = createContext<GlobalContextType | undefined>(undefined);
 // Create a provider component
 export const GlobalProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [menuVisible, setMenuVisible] = useState<boolean>(false);
-  const [activeGallery, setActiveGallery] = useState<string>(GALLERIES.BW_HEAD_SHOTS);
+  const [activeLink, setActiveLink] = useState<string>(GALLERIES.BW_HEAD_SHOTS);
 
   const toggleMenu = () => setMenuVisible(prev => !prev);
 
   return (
-    <GlobalContext.Provider value={{ menuVisible, toggleMenu, activeGallery, setActiveGallery }}>
+    <GlobalContext.Provider value={{ menuVisible, toggleMenu, activeLink, setActiveLink }}>
       {children}
     </GlobalContext.Provider>
   );

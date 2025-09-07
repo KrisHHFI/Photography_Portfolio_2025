@@ -5,10 +5,10 @@ import { useEffect, useState } from 'react';
 import { useGlobalContext } from '../context/GlobalContext';
 
 const Carousel: React.FC = () => {
-  const { activeGallery } = useGlobalContext();
+  const { activeLink } = useGlobalContext();
 
   const getCurrentGalleryImages = () => {
-    switch (activeGallery) {
+    switch (activeLink) {
       case GALLERIES.BW_HEAD_SHOTS:
         return bwImages;
       case GALLERIES.COLOUR_HEAD_SHOTS:
@@ -31,7 +31,7 @@ const Carousel: React.FC = () => {
     setCurrentImages(newImages);
     setImageKeys(Object.keys(newImages) as (keyof typeof newImages)[]);
     setCurrentIndex(0); // Reset index to the first image
-  }, [activeGallery]);
+  }, [activeLink]);
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) =>

@@ -1,7 +1,7 @@
 export interface GlobalContextType {
-    activeGallery: string;
+    activeLink: string;
     menuVisible: boolean;
-    setActiveGallery: (gallery: string) => void;
+    setActiveLink: (gallery: string) => void;
     toggleMenu: () => void;
 }
 
