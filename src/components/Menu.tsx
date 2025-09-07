@@ -28,7 +28,6 @@ const Menu: React.FC = () => {
           </div>
         ))}
 
-        {/* Sign in as another link */}
         <div
           className={getLinkClass('Sign in')}
           onClick={() => handleLinkChange(activeLink)}
