@@ -2,7 +2,6 @@ import Image from 'next/image';
 import { GALLERIES } from '../constants/strings';
 import { socialLinks } from '../constants/objectArrays';
 import { useGlobalContext } from '../context/GlobalContext';
-import { signIn } from '@/functions/signIn';
 
 const Menu: React.FC = () => {
   const { activeLink, setActiveLink, menuVisible, toggleMenu } = useGlobalContext();
@@ -28,15 +27,6 @@ const Menu: React.FC = () => {
             {gallery}
           </div>
         ))}
-
-        <div
-          className={getLinkClass('Sign in')}
-          onClick={() => {
-            handleLinkChange('Sign in');
-            signIn();
-          }}        >
-          Sign in
-        </div>
       </div>
 
       <div className="menu-social-icons">
